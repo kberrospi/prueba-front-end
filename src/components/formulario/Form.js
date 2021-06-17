@@ -17,10 +17,10 @@ export const Form = ({ formValues, setFormValues }) => {
 
     return (
         <form className='column form' onSubmit={(e) => sendForm(e, formValues, setFormValues)} >
-            <img src={iconForm} className='form-icon mt-10 mb-10' alt='contacto' />
+            <img src={iconForm} className='form__icon mt-10 mb-10' alt='contacto' />
             <input
                 name='nombre'
-                className='form-control input-form'
+                className='form__input'
                 placeholder='Nombre Completo'
                 type='text'
                 autoComplete='off'
@@ -30,7 +30,7 @@ export const Form = ({ formValues, setFormValues }) => {
             />
             <input
                 name='email'
-                className='form-control'
+                className='form__input'
                 placeholder='Email'
                 type='email'
                 autoComplete='off'
@@ -38,10 +38,10 @@ export const Form = ({ formValues, setFormValues }) => {
                 onChange={(e) => setFormValues({ ...formValues, email: e.target.value })}
                 onBlur={(event) => validarEmail(email, setFormValues, formValues, event)}
             />
-            { errorMail && <div className='span-error'> <span > Email incorrecto </span></div>}
+            { errorMail && <div className='form__error'> <span > Email incorrecto </span></div>}
             <input
                 name='celular'
-                className='form-control'
+                className='form__input'
                 placeholder='Celular'
                 type='number'
                 autoComplete='off'
@@ -50,7 +50,7 @@ export const Form = ({ formValues, setFormValues }) => {
                 onWheel={(e) => e.target.blur()}
             />
             <select
-                className='form-control'
+                className='form__input'
                 name='edad'
                 value={edad || ''}
                 onChange={(e) => setFormValues({ ...formValues, edad: e.target.value })}
@@ -67,8 +67,8 @@ export const Form = ({ formValues, setFormValues }) => {
                     })
                 }
             </select>
-            { !edad && <div className='span-error'> <span > Por favor selecciona tu edad. </span></div>}
-            <button className='form-control btn-primary mb-5' type='submit' >
+            { !edad && <div className='form__error'> <span > Por favor selecciona tu edad. </span></div>}
+            <button className='form__btn-primary mb-5' type='submit' >
                 Enviar
                         </button>
         </form>

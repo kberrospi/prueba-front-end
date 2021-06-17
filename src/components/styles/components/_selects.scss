@@ -1,0 +1,14 @@
+select{
+    font-family: 'Poppins', sans-serif;
+    border-radius: 7px;
+    outline: none;
+    border: 1px solid transparent;
+    background-color: lighten($color: $light, $amount: 3);
+    text-indent: 10px;
+}
+
+select:focus{
+    outline: none;
+    border: 1px solid transparent;
+    background-color:darken($color: $light, $amount: 2);
+}

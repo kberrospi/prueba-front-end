@@ -1,5 +1,4 @@
 import Swal from 'sweetalert2';
-import '../styles/style.css'
 
 export const sendForm = (e, values, setFormValues) => {
     e.preventDefault();
@@ -39,8 +38,7 @@ export const validarTexto = (value, setFormValues, formValues) => {
 
 export const validarEmail = (value, setFormValues, formValues, event) => {
     event.preventDefault();
-    const regex = new RegExp(/^(?:[^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*|"[^\n"]+")@(?:[^<>()[\].,;:\s@"]+\.)+[^<>()[\]\.,;:\s@"]{2,63}$/i);
-    
+    const regex = new RegExp(/^\w+([\w.-]?\w+)*@\w+([\w.-]?\w+)*(\.\w{2,4})+$/);
 
     ((regex.test(value) || !value) ?
         setFormValues({ ...formValues, errorMail: false })

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Formulario } from './formulario/Formulario';
 import { Menu } from './menu/Menu';
-import './styles/style.css'
+import './styles/styles.scss';
 
 export const App = () => {
     const [aerolinea, setAerolinea] = useState('')

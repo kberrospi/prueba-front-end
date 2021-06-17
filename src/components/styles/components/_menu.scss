@@ -1,0 +1,34 @@
+
+.menu__topnav{
+    background-color: $primary;
+
+    & li{
+        display: inline-block;
+        padding: 16px 14px;
+    }
+
+    & span{
+        cursor: pointer;
+        padding: 14px 16px;
+        color: $light;
+        text-align: center;
+        text-decoration: none;
+        font-size: 17px;
+        opacity: 0.6;
+        transition: 0.3s;
+        font-weight: 400;
+    }
+
+    & span:hover{
+        color: white;
+        opacity: 1;
+    }
+
+    @media only screen and (max-width: $small){
+        height: auto;
+        border-bottom: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

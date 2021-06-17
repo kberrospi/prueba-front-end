@@ -1,0 +1,21 @@
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+}
+
+input[type=text], [type=email], [type=number]{
+    font-family: 'Poppins', sans-serif;
+    appearance: none;
+    border: 1px solid transparent;
+    background-color: lighten($color: $light, $amount: 3);
+    text-indent: 10px;
+    border-radius: 7px;
+
+    &:focus{
+        appearance: none;
+        outline: none;
+        border-radius: 7px;
+        border: 1px solid transparent;
+        background-color:darken($color: $light, $amount: 2);
+    }
+}

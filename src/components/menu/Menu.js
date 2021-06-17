@@ -5,7 +5,7 @@ export const Menu = ({ setAerolinea }) => {
 
     return (
         <>   
-            <ul className="topnav" > 
+            <ul className="menu__topnav" > 
                 {
                     data.map(({ name, id }) => {
                         return(
